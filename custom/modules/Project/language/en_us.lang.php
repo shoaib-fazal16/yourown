@@ -1,5 +1,5 @@
 <?php
-// created: 2014-07-28 16:57:57
+// created: 2015-03-22 13:34:31
 $mod_strings = array (
   'LBL_PROJECT_TASKS_SUBPANEL_TITLE' => 'Project Tasks',
   'LBL_VIEW_GANTT_TITLE' => 'View Gantt',
@@ -54,4 +54,6 @@ $mod_strings = array (
   'LBL_LIST_ASSIGNED_USER' => 'Project Manager',
   'LBL_UNASSIGNED' => 'Unassigned',
   'LBL_PROJECT_USERS_1_FROM_USERS_TITLE' => 'Resources',
+  'LBL_ACCOUNTS' => 'Buyers',
+  'LBL_ACCOUNTS_SUBPANEL_TITLE' => 'Buyers',
 );
