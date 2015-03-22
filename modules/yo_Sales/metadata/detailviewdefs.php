@@ -14,6 +14,23 @@ array (
           1 => 'DUPLICATE',
           2 => 'DELETE',
           3 => 'FIND_DUPLICATES',
+		  4 => 
+          array (
+            'customCode' => '{if $bean->aclAccess("edit")}<input type="button" class="button" onClick="document.location=\'index.php?module=yo_AmortizationSchedule&action=calcschedule&record={$fields.id.value}\'" name="convert" value="{$MOD.LNK_NEW_RECORD}">{/if}',
+            'sugar_html' => 
+            array (
+              'type' => 'button',
+              'value' => '{$MOD.LNK_NEW_RECORD}',
+              'htmlOptions' => 
+              array (
+                'class' => 'button',
+                'onClick' => 'document.location=\'index.php?module=yo_AmortizationSchedule&action=calcschedule&record={$fields.id.value}\'',
+                'name' => 'convert',
+                'id' => 'convert_lead_button',
+              ),
+              'template' => '{if $bean->aclAccess("edit")}[CONTENT]{/if}',
+            ),
+          ),
         ),
       ),
       'maxColumns' => '2',
