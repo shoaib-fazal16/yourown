@@ -133,6 +133,17 @@ array (
           array (
             'name' => 'yo_subdivisions_aos_products_name',
           ),
+          1 => 
+          array (
+            'name' => 'yo_investingentity_aos_products_name',
+          ),
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'yo_sales_aos_products_name',
+          ),
         ),
       ),
     ),

@@ -180,6 +180,13 @@ array (
             'name' => 'yo_county_leads_name',
           ),
         ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'yo_investingentity_leads_name',
+          ),
+        ),
       ),
       'LBL_PANEL_ADVANCED' => 
       array (

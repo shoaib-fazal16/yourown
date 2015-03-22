@@ -195,6 +195,10 @@ array (
           array (
             'name' => 'yo_subdivisions_campaigns_name',
           ),
+          1 => 
+          array (
+            'name' => 'yo_investingentity_campaigns_name',
+          ),
         ),
       ),
       'LBL_NAVIGATION_MENU_GEN2' => 
