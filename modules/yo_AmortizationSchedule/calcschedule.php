@@ -56,7 +56,7 @@ if( isset($_REQUEST['record'])&&!empty($_REQUEST['record']) ){
 			$payment->paydate = $_paydate['y'].'-'.$_paydate['m'].'-'.$_paydate['d'];
 			$payment->tax_amnt = $monthly_tax;
 			
-			$payment->payment = $purchase->monthly_payment_c;
+			$payment->payment = $purchase->monthly_payment;
 			$payment->bbalance = $balance;
 			$payment->interest = $balance * $monthly_interest_rate;
 			
@@ -64,7 +64,7 @@ if( isset($_REQUEST['record'])&&!empty($_REQUEST['record']) ){
 			$payment->cinterest = $cinterest;//comulative!
 
 			//last payment
-			if($balance < $purchase->monthly_payment_c){
+			if($balance < $purchase->monthly_payment){
 				$payment->payment = $balance + $payment->interest;// + $payment->tax_amnt;
 			}
 			$payment->principal = $payment->payment - $payment->interest;// + $payment->tax_amnt);
@@ -76,6 +76,7 @@ if( isset($_REQUEST['record'])&&!empty($_REQUEST['record']) ){
 			$balance = $payment->ebalance;
 			$payment->received = false;
 			//$payment->description = '';
+			$payment->from_calcschedule = true;
 			$payment->save(false);
 			
 			$_paydate = getNextDate( $_paydate['y'], $_paydate['m'], $_paydate['d'] );

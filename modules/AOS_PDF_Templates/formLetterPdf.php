@@ -132,7 +132,26 @@
 				$note->parent_id = $module->account_id;
 			}
 			$note->save();
-		
+			////////////////////////////////////
+			$GLOBALS['log']->fatal("Lead ID: ".$module->id);
+			
+			$propoerty_ids = implode('","', $_REQUEST['property_id']);
+			$GLOBALS['log']->fatal($propoerty_ids);
+			$query = 'SELECT c_c.name as county_name, aos_products.name as apn, aos_products.legal_description as legal_description, aos_products.situs_state as state
+			FROM yo_county as c_c
+			LEFT JOIN yo_county_aos_products_c
+			ON c_c.id = yo_county_aos_products_c.yo_county_aos_productsyo_county_ida
+			LEFT JOIN aos_products
+			ON yo_county_aos_products_c.yo_county_aos_productsaos_products_idb = aos_products.id
+			WHERE yo_county_aos_productsaos_products_idb IN ("'.$propoerty_ids.'")';
+			$result = $GLOBALS['db']->query($query);
+			$county_name = $GLOBALS['db']->fetchByAssoc($result);		
+			$printable =  str_replace("leads_aos_products_1_name_yo_county_aos_products_name",$county_name['county_name'], $printable );
+			$printable =  str_replace("leads_aos_products_1_name_name",$county_name['apn'], $printable );
+			$printable =  str_replace("leads_aos_products_1_name_legal_description",$county_name['legal_description'], $printable );
+			$printable =  str_replace("leads_aos_products_1_name_situs_state",$county_name['state'], $printable );	
+			////////////////////////////////////////////////
+			
 			$fp = fopen($sugar_config['upload_dir'].'nfile.pdf','wb');
 			fclose($fp);
 		
