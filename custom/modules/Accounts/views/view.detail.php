@@ -98,6 +98,43 @@ class AccountsViewDetail extends ViewDetail {
 		}				
 		echo $this->dv->display();
  	}
+	
+		 protected function _displaySubPanels()
+        {
+            if (isset($this->bean) && !empty($this->bean->id) && (file_exists('modules/' . $this->module . '/metadata/subpaneldefs.php') || file_exists('custom/modules/' . $this->module . '/metadata/subpaneldefs.php') || file_exists('custom/modules/' . $this->module . '/Ext/Layoutdefs/layoutdefs.ext.php'))) {
+                $GLOBALS['focus'] = $this->bean;
+                require_once ('include/SubPanel/SubPanelTiles.php');
+                $subpanel = new SubPanelTiles($this->bean, $this->module);
+
+   		//echo "<pre>";
+
+		//print_r($subpanel->subpanel_definitions->layout_defs['subpanel_setup']);
+
+		//echo "<pre>";
+                //Dependent logic
+                //if ($this->bean->account_type == 'Analyst')
+                //{
+                    //Subpanels to hide
+                    $hideSubpanels=array(
+                        'accounts',
+                        'leads',
+                        'documents',
+                        'account_aos_contracts',
+                    );
+   
+                    foreach ($hideSubpanels as $subpanelKey)
+                    {
+                        //Remove subpanel if set
+                        if (isset($subpanel->subpanel_definitions->layout_defs['subpanel_setup'][$subpanelKey]))
+                        {
+                            unset($subpanel->subpanel_definitions->layout_defs['subpanel_setup'][$subpanelKey]);
+                        }
+                    }
+                //}
+   
+                echo $subpanel->display();
+            }
+        }
 }
 
 ?>

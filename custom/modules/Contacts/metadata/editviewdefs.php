@@ -44,12 +44,23 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
       'lbl_contact_information' => 
       array (
         0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'contact_type',
+            'studio' => 'visible',
+            'label' => 'LBL_CONTACT_TYPE',
+          ),
+          1 => '',
+        ),
+        1 => 
         array (
           0 => 
           array (
@@ -61,46 +72,28 @@ array (
             'name' => 'last_name',
           ),
         ),
-        1 => 
+        2 => 
         array (
           0 => 
+          array (
+            'name' => 'phone_home',
+            'comment' => 'Home phone number of the contact',
+            'label' => 'LBL_HOME_PHONE',
+          ),
+          1 => 
           array (
             'name' => 'phone_work',
             'comment' => 'Work phone number of the contact',
             'label' => 'LBL_OFFICE_PHONE',
           ),
-          1 => 
-          array (
-            'name' => 'phone_mobile',
-            'comment' => 'Mobile phone number of the contact',
-            'label' => 'LBL_MOBILE_PHONE',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'title',
-            'comment' => 'The title of the contact',
-            'label' => 'LBL_TITLE',
-          ),
-          1 => 'department',
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'account_name',
-            'displayParams' => 
-            array (
-              'key' => 'billing',
-              'copy' => 'primary',
-              'billingKey' => 'primary',
-              'additionalFields' => 
-              array (
-                'phone_office' => 'phone_work',
-              ),
-            ),
+            'name' => 'phone_mobile',
+            'comment' => 'Mobile phone number of the contact',
+            'label' => 'LBL_MOBILE_PHONE',
           ),
           1 => 
           array (
@@ -110,15 +103,6 @@ array (
           ),
         ),
         4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'email1',
-            'studio' => 'false',
-            'label' => 'LBL_EMAIL_ADDRESS',
-          ),
-        ),
-        5 => 
         array (
           0 => 
           array (
@@ -141,11 +125,19 @@ array (
             'displayParams' => 
             array (
               'key' => 'alt',
-              'copy' => 'primary',
               'rows' => 2,
               'cols' => 30,
               'maxlength' => 150,
             ),
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'email1',
+            'studio' => 'false',
+            'label' => 'LBL_EMAIL_ADDRESS',
           ),
         ),
         6 => 
@@ -160,8 +152,7 @@ array (
         array (
           0 => 
           array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO_NAME',
+            'name' => 'leads_contacts_1_name',
           ),
           1 => 
           array (
@@ -175,19 +166,25 @@ array (
         array (
           0 => 
           array (
-            'name' => 'lead_source',
-            'comment' => 'How did the contact come about',
-            'label' => 'LBL_LEAD_SOURCE',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
+          1 => '',
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'report_to_name',
-            'label' => 'LBL_REPORTS_TO',
+            'name' => 'lead_source',
+            'comment' => 'How did the contact come about',
+            'label' => 'LBL_LEAD_SOURCE',
           ),
-          1 => 'campaign_name',
+          1 => 
+          array (
+            'name' => 'do_not_call',
+            'comment' => 'An indicator of whether contact can be called',
+            'label' => 'LBL_DO_NOT_CALL',
+          ),
         ),
       ),
     ),

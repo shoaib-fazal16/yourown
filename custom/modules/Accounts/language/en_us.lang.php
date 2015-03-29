@@ -1,5 +1,5 @@
 <?php
-// created: 2015-03-22 13:34:38
+// created: 2015-03-29 13:06:32
 $mod_strings = array (
   'LNK_NEW_ACCOUNT' => 'Create Buyer',
   'LNK_ACCOUNT_LIST' => 'View Buyers',
@@ -16,4 +16,7 @@ $mod_strings = array (
   'LBL_HOMEPAGE_TITLE' => 'My Buyers',
   'LBL_PARENT_ACCOUNT_ID' => 'Parent Buyer ID',
   'LBL_MODULE_NAME' => 'Buyers',
+  'LBL_LIST_ACCOUNT_NAME' => 'First Name',
+  'LBL_NAME' => 'First Name',
+  'LBL_PANEL_ADVANCED' => 'Property Criteria',
 );

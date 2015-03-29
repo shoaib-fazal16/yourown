@@ -113,25 +113,21 @@ array (
           'field' => '30',
         ),
       ),
-      'useTabs' => true,
+      'useTabs' => false,
       'tabDefs' => 
       array (
         'LBL_CAMPAIGN_INFORMATION' => 
         array (
-          'newTab' => true,
+          'newTab' => false,
           'panelDefault' => 'expanded',
         ),
         'LBL_NAVIGATION_MENU_GEN2' => 
         array (
-          'newTab' => true,
-          'panelDefault' => 'expanded',
-        ),
-        'LBL_PANEL_ASSIGNMENT' => 
-        array (
-          'newTab' => true,
+          'newTab' => false,
           'panelDefault' => 'expanded',
         ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -139,19 +135,19 @@ array (
       array (
         0 => 
         array (
-          0 => 'name',
-          1 => 
+          0 => 
           array (
-            'name' => 'status',
-            'label' => 'LBL_CAMPAIGN_STATUS',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO',
           ),
+          1 => 'name',
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'start_date',
-            'label' => 'LBL_CAMPAIGN_START_DATE',
+            'name' => 'status',
+            'label' => 'LBL_CAMPAIGN_STATUS',
           ),
           1 => 'campaign_type',
         ),
@@ -159,65 +155,25 @@ array (
         array (
           0 => 
           array (
-            'name' => 'end_date',
-            'label' => 'LBL_CAMPAIGN_END_DATE',
+            'name' => 'start_date',
+            'label' => 'LBL_CAMPAIGN_START_DATE',
           ),
           1 => 
           array (
-            'name' => 'frequency',
-            'customCode' => '{if $fields.campaign_type.value == "NewsLetter"}<div style=\'none\' id=\'freq_field\'>{$APP_LIST.newsletter_frequency_dom[$fields.frequency.value]}</div>{/if}&nbsp;',
-            'customLabel' => '{if $fields.campaign_type.value == "NewsLetter"}<div style=\'none\' id=\'freq_label\'>{$MOD.LBL_CAMPAIGN_FREQUENCY}</div>{/if}&nbsp;',
+            'name' => 'end_date',
+            'label' => 'LBL_CAMPAIGN_END_DATE',
           ),
         ),
         3 => 
         array (
-          0 => 
-          array (
-            'name' => 'content',
-            'label' => 'LBL_CAMPAIGN_CONTENT',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO',
-          ),
-          1 => 
-          array (
-            'name' => 'yo_county_campaigns_name',
-          ),
-        ),
-        5 => 
-        array (
-          0 => 
-          array (
-            'name' => 'yo_subdivisions_campaigns_name',
-          ),
-          1 => 
-          array (
-            'name' => 'yo_investingentity_campaigns_name',
-          ),
-        ),
-      ),
-      'LBL_NAVIGATION_MENU_GEN2' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'currency_id',
-            'comment' => 'Currency in use for the campaign',
-            'label' => 'LBL_CURRENCY',
-          ),
+          0 => '',
           1 => 
           array (
             'name' => 'impressions',
             'label' => 'LBL_CAMPAIGN_IMPRESSIONS',
           ),
         ),
-        1 => 
+        4 => 
         array (
           0 => 
           array (
@@ -230,7 +186,7 @@ array (
             'label' => '{$MOD.LBL_CAMPAIGN_EXPECTED_COST} ({$CURRENCY})',
           ),
         ),
-        2 => 
+        5 => 
         array (
           0 => 
           array (
@@ -243,7 +199,7 @@ array (
             'label' => '{$MOD.LBL_CAMPAIGN_EXPECTED_REVENUE} ({$CURRENCY})',
           ),
         ),
-        3 => 
+        6 => 
         array (
           0 => 
           array (
@@ -251,21 +207,49 @@ array (
             'label' => 'LBL_CAMPAIGN_OBJECTIVE',
           ),
         ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'content',
+            'label' => 'LBL_CAMPAIGN_CONTENT',
+          ),
+          1 => 
+          array (
+            'name' => 'yo_investingentity_campaigns_name',
+          ),
+        ),
+        8 => 
+        array (
+          0 => '',
+          1 => '',
+        ),
+        9 => 
+        array (
+          0 => 
+          array (
+            'name' => 'yo_subdivisions_campaigns_name',
+          ),
+          1 => '',
+        ),
+        10 => 
+        array (
+          0 => '',
+        ),
       ),
-      'LBL_PANEL_ASSIGNMENT' => 
+      'LBL_NAVIGATION_MENU_GEN2' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            'name' => 'date_entered',
-            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+            'name' => 'target_state',
+            'studio' => 'visible',
+            'label' => 'LBL_TARGET_STATE',
           ),
           1 => 
           array (
-            'name' => 'date_modified',
-            'label' => 'LBL_DATE_MODIFIED',
-            'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
+            'name' => 'yo_county_campaigns_name',
           ),
         ),
       ),

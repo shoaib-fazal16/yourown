@@ -111,6 +111,7 @@ array (
           0 => 
           array (
             'name' => 'yo_county_aos_products_name',
+	    'customCode' => '<a href="index.php?module=yo_County&action=DetailView&record={$fields.yo_county_aos_productsyo_county_ida.value}">{$fields.yo_county_aos_products_name.value}</a>&nbsp;&nbsp;<a href="javascript:void()" onclick="view_county_detail(\'{$fields.yo_county_aos_productsyo_county_ida.value}\')"><img src="themes/default/images/eye.png" width="20px" height="20px"></a>',
           ),
           1 => 
           array (

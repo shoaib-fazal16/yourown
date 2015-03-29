@@ -1,0 +1,24 @@
+<?php
+$mod_strings['LBL_ACCESS_ID'] = 'Access ID';
+$mod_strings['LBL_EXECUTED_PURCHASE_AGREEMENT'] = 'Executed purchase agreement';
+$mod_strings['LBL_FULLNAME'] = 'Full Name';
+$mod_strings['LBL_LAST_NAME'] = 'Last Name';
+$mod_strings['LBL_LEADIN_HASH_KEY'] = 'leadin hash key';
+$mod_strings['LBL_LEAD_RATING'] = 'Lead Rating';
+$mod_strings['LBL_MONTHLY_PAYMENT_MAX'] = 'Monthly Payment Max';
+$mod_strings['LBL_MONTHLY_PAYMENT_MIN'] = 'Monthly Payment Min';
+$mod_strings['LBL_NAME_ON_CONTRACT'] = 'Name(s) on contract';
+$mod_strings['LBL_OPTIN_DATE'] = 'Optin Date';
+$mod_strings['LBL_OPTIN_FORM'] = 'Optin Form';
+$mod_strings['LBL_OVERALL_PRICE_MAX'] = 'Overall price max';
+$mod_strings['LBL_OVERALL_PRICE_MIN'] = 'Overall price min';
+$mod_strings['LBL_PRIMARY_PHONE'] = 'Primary phone number';
+$mod_strings['LBL_PROPERTY_SIZE'] = 'Property size';
+$mod_strings['LBL_PROPERTY_USE'] = 'Property Use';
+$mod_strings['LBL_PROSPECT_BUYER_STATUS'] = 'Prospect/Buyer';
+$mod_strings['LBL_SEARCH_STATE'] = 'Search State';
+$mod_strings['LBL_SEARCH_STATE_REGION'] = 'Search state region';
+$mod_strings['LBL_SOURCE'] = 'Source';
+$mod_strings['LBL_STATUS'] = 'Status';
+$mod_strings['LBL_SURVEY_DATE'] = 'Survey Date';
+$mod_strings['LBL_TIME_TO_BUY'] = 'Time To Buy';

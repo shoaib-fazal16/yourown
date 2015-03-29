@@ -111,31 +111,37 @@ array (
           'file' => 'modules/Leads/Lead.js',
         ),
       ),
-      'useTabs' => true,
+      'useTabs' => false,
       'tabDefs' => 
       array (
         'LBL_CONTACT_INFORMATION' => 
         array (
-          'newTab' => true,
+          'newTab' => false,
           'panelDefault' => 'expanded',
         ),
         'LBL_PANEL_ADVANCED' => 
         array (
-          'newTab' => true,
-          'panelDefault' => 'expanded',
-        ),
-        'LBL_PANEL_ASSIGNMENT' => 
-        array (
-          'newTab' => true,
+          'newTab' => false,
           'panelDefault' => 'expanded',
         ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
       'lbl_contact_information' => 
       array (
         0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'contact_type',
+            'studio' => 'visible',
+            'label' => 'LBL_CONTACT_TYPE',
+          ),
+          1 => '',
+        ),
+        1 => 
         array (
           0 => 
           array (
@@ -150,48 +156,26 @@ array (
             'label' => 'LBL_LAST_NAME',
           ),
         ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'phone_work',
-            'label' => 'LBL_OFFICE_PHONE',
-          ),
-          1 => 
-          array (
-            'name' => 'phone_mobile',
-            'label' => 'LBL_MOBILE_PHONE',
-          ),
-        ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'title',
-            'comment' => 'The title of the contact',
-            'label' => 'LBL_TITLE',
+            'name' => 'phone_home',
+            'comment' => 'Home phone number of the contact',
+            'label' => 'LBL_HOME_PHONE',
           ),
           1 => 
           array (
-            'name' => 'department',
-            'label' => 'LBL_DEPARTMENT',
+            'name' => 'phone_work',
+            'label' => 'LBL_OFFICE_PHONE',
           ),
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'account_name',
-            'label' => 'LBL_ACCOUNT_NAME',
-            'displayParams' => 
-            array (
-              'enableConnectors' => true,
-              'module' => 'Contacts',
-              'connectors' => 
-              array (
-                0 => 'ext_rest_linkedin',
-              ),
-            ),
+            'name' => 'phone_mobile',
+            'label' => 'LBL_MOBILE_PHONE',
           ),
           1 => 
           array (
@@ -200,15 +184,6 @@ array (
           ),
         ),
         4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'email1',
-            'studio' => 'false',
-            'label' => 'LBL_EMAIL_ADDRESS',
-          ),
-        ),
-        5 => 
         array (
           0 => 
           array (
@@ -223,12 +198,21 @@ array (
           1 => 
           array (
             'name' => 'alt_address_street',
-            'label' => 'LBL_ALTERNATE_ADDRESS',
-            'type' => 'address',
+            'label' => 'LBL_ALT_ADDRESS',
+	    'type' => 'address',
             'displayParams' => 
             array (
               'key' => 'alt',
             ),
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'email1',
+            'studio' => 'false',
+            'label' => 'LBL_EMAIL_ADDRESS',
           ),
         ),
         6 => 
@@ -244,8 +228,7 @@ array (
         array (
           0 => 
           array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO_NAME',
+            'name' => 'leads_contacts_1_name',
           ),
           1 => 
           array (
@@ -259,40 +242,24 @@ array (
         array (
           0 => 
           array (
-            'name' => 'lead_source',
-            'comment' => 'How did the contact come about',
-            'label' => 'LBL_LEAD_SOURCE',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
+          1 => '',
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'report_to_name',
-            'label' => 'LBL_REPORTS_TO',
+            'name' => 'lead_source',
+            'comment' => 'How did the contact come about',
+            'label' => 'LBL_LEAD_SOURCE',
           ),
           1 => 
           array (
-            'name' => 'campaign_name',
-            'label' => 'LBL_CAMPAIGN',
-          ),
-        ),
-      ),
-      'LBL_PANEL_ASSIGNMENT' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'date_entered',
-            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
-            'label' => 'LBL_DATE_ENTERED',
-          ),
-          1 => 
-          array (
-            'name' => 'date_modified',
-            'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
-            'label' => 'LBL_DATE_MODIFIED',
+            'name' => 'do_not_call',
+            'comment' => 'An indicator of whether contact can be called',
+            'label' => 'LBL_DO_NOT_CALL',
           ),
         ),
       ),

@@ -24,10 +24,25 @@ function initialize()
 
 	marker.setMap(map);
 }
+function view_county_detail(id){
+	$('#county_detail_loading').show();
+	$.get( "index.php?module=ACQ2_Property_Information&action=county_detail&record="+id, function(response) {
+		$('#county_detail_loading').hide();
+		$('#county_detail').html(response).show();
+	});
+
+}
+
+function close_county_detail(){
+	$('#county_detail').html("").hide();
+}
+
 $(document).ready(function(){
 	lat = $('#location_latitude').text();
 	lng = $('#loction_longitude').text();
-	// google.maps.event.addDomListener(window, 'load', initialize);
+	var county_id = '';
+	var html = 'Loading...';
+	county_id = $('#county_id').text();
 	if(lat !='' && lng !=''){
 	google.maps.event.addDomListener(window, 'load', initialize);
 	}else{

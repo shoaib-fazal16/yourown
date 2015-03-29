@@ -43,17 +43,8 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-        'LBL_PANEL_ADVANCED' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
-        'LBL_PANEL_ASSIGNMENT' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -61,39 +52,97 @@ array (
       array (
         0 => 
         array (
+          0 => 'status',
+          1 => 
+          array (
+            'name' => 'sub_status',
+            'studio' => 'visible',
+            'label' => 'LBL_SUB_STATUS',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'yo_investingentity_leads_name',
+          ),
+          1 => 
+          array (
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO',
+          ),
+        ),
+        2 => 
+        array (
           0 => 
           array (
             'name' => 'first_name',
             'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">',
           ),
-        ),
-        1 => 
-        array (
-          0 => 'last_name',
-          1 => 'phone_work',
-        ),
-        2 => 
-        array (
-          0 => 'title',
-          1 => 'phone_mobile',
+          1 => 'last_name',
         ),
         3 => 
         array (
-          0 => 'department',
-          1 => 'phone_fax',
+          0 => 
+          array (
+            'name' => 'secondary_owner_first',
+            'label' => 'LBL_SECONDARY_OWNER_FIRST',
+          ),
+          1 => 
+	  array (
+            'name' => 'secondary_owner_last',
+            'label' => 'LBL_SECONDARY_OWNER_LAST',
+          ),
         ),
         4 => 
         array (
           0 => 
           array (
-            'name' => 'account_name',
-            'type' => 'varchar',
-            'validateDependency' => false,
-            'customCode' => '<input name="account_name" id="EditView_account_name" {if ($fields.converted.value == 1)}disabled="true"{/if} size="30" maxlength="255" type="text" value="{$fields.account_name.value}">',
+            'name' => 'name_on_title',
+            'label' => 'LBL_NAME_ON_TITLE',
           ),
-          1 => 'website',
+          1 => 
+          array (
+            'name' => 'level_of_interest',
+            'studio' => 'visible',
+            'label' => 'LBL_LEVEL_OF_INTEREST',
+          ),
         ),
         5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'marital_status',
+            'studio' => 'visible',
+            'label' => 'LBL_MARITAL_STATUS',
+          ),
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 'phone_work',
+          1 => 'phone_mobile',
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'phone_home',
+            'comment' => 'Home phone number of the contact',
+            'label' => 'LBL_HOME_PHONE',
+          ),
+          1 => 'phone_fax',
+        ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'document_file',
+            'label' => 'LBL_DOCUMENT_FILE',
+          ),
+          1 => '',
+        ),
+        9 => 
         array (
           0 => 
           array (
@@ -108,77 +157,34 @@ array (
               'maxlength' => 150,
             ),
           ),
-          1 => 
-          array (
-            'name' => 'alt_address_street',
-            'hideLabel' => true,
-            'type' => 'address',
-            'displayParams' => 
-            array (
-              'key' => 'alt',
-              'copy' => 'primary',
-              'rows' => 2,
-              'cols' => 30,
-              'maxlength' => 150,
-            ),
-          ),
         ),
-        6 => 
+        10 => 
         array (
           0 => 'email1',
         ),
-        7 => 
-        array (
-          0 => 'description',
-          1 => 
-          array (
-            'name' => 'yo_county_leads_name',
-          ),
-        ),
-        8 => 
+        11 => 
         array (
           0 => 
           array (
-            'name' => 'yo_investingentity_leads_name',
+            'name' => 'leads_aos_contracts_1_name',
           ),
         ),
-      ),
-      'LBL_PANEL_ADVANCED' => 
-      array (
-        0 => 
-        array (
-          0 => 'status',
-          1 => 'lead_source',
-        ),
-        1 => 
+        12 => 
         array (
           0 => 
           array (
-            'name' => 'status_description',
+            'name' => 'do_not_call',
+            'comment' => 'An indicator of whether contact can be called',
+            'label' => 'LBL_DO_NOT_CALL',
           ),
-          1 => 
-          array (
-            'name' => 'lead_source_description',
-          ),
+          1 => 'campaign_name',
         ),
-        2 => 
-        array (
-          0 => 'opportunity_amount',
-          1 => 'refered_by',
-        ),
-        3 => 
-        array (
-          0 => 'campaign_name',
-        ),
-      ),
-      'LBL_PANEL_ASSIGNMENT' => 
-      array (
-        0 => 
+        13 => 
         array (
           0 => 
           array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO',
+            'name' => 'letter_returned',
+            'label' => 'LBL_LETTER_RETURNED',
           ),
         ),
       ),

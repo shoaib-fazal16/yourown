@@ -78,6 +78,7 @@ function ConvertItems(id)  {ldelim}
           'panelDefault' => 'expanded',
         ),
       ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -87,23 +88,19 @@ function ConvertItems(id)  {ldelim}
         array (
           0 => 
           array (
-            'name' => 'name',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO',
           ),
           1 => 
           array (
-            'name' => 'status',
+            'name' => 'name',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'start_date',
-            'displayParams' => 
-            array (
-              'required' => false,
-              'showFormats' => true,
-            ),
+            'name' => 'status',
           ),
           1 => 
           array (
@@ -118,20 +115,50 @@ function ConvertItems(id)  {ldelim}
         array (
           0 => 
           array (
+            'name' => 'start_date',
+            'displayParams' => 
+            array (
+              'required' => false,
+              'showFormats' => true,
+            ),
+          ),
+          1 => 
+          array (
             'name' => 'end_date',
             'displayParams' => 
             array (
               'showFormats' => true,
             ),
           ),
-          1 => 
-          array (
-            'name' => 'frequency',
-            'customCode' => '<div style=\'none\' id=\'freq_field\'>{html_options name="frequency" options=$fields.frequency.options selected=$fields.frequency.value}</div></TD>',
-            'customLabel' => '<div style=\'none\' id=\'freq_label\'>{$MOD.LBL_CAMPAIGN_FREQUENCY}</div>',
-          ),
         ),
         3 => 
+        array (
+          0 => '',
+          1 => 'impressions',
+        ),
+        4 => 
+        array (
+          0 => 'budget',
+          1 => 'expected_cost',
+        ),
+        5 => 
+        array (
+          0 => 'actual_cost',
+          1 => 'expected_revenue',
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'objective',
+            'displayParams' => 
+            array (
+              'rows' => 8,
+              'cols' => 80,
+            ),
+          ),
+        ),
+        7 => 
         array (
           0 => 
           array (
@@ -142,58 +169,42 @@ function ConvertItems(id)  {ldelim}
               'cols' => 80,
             ),
           ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO',
-          ),
           1 => 
           array (
-            'name' => 'yo_county_campaigns_name',
+            'name' => 'yo_investingentity_campaigns_name',
           ),
         ),
-        5 => 
+        8 => 
+        array (
+          0 => '',
+          1 => '',
+        ),
+        9 => 
         array (
           0 => 
           array (
             'name' => 'yo_subdivisions_campaigns_name',
           ),
-          1 => 
-          array (
-            'name' => 'yo_investingentity_campaigns_name',
-          ),
+          1 => '',
+        ),
+        10 => 
+        array (
+          0 => '',
         ),
       ),
       'LBL_NAVIGATION_MENU_GEN2' => 
       array (
         0 => 
         array (
-          0 => 'currency_id',
-          1 => 'impressions',
-        ),
-        1 => 
-        array (
-          0 => 'budget',
-          1 => 'expected_cost',
-        ),
-        2 => 
-        array (
-          0 => 'actual_cost',
-          1 => 'expected_revenue',
-        ),
-        3 => 
-        array (
           0 => 
           array (
-            'name' => 'objective',
-            'displayParams' => 
-            array (
-              'rows' => 8,
-              'cols' => 80,
-            ),
+            'name' => 'target_state',
+            'studio' => 'visible',
+            'label' => 'LBL_TARGET_STATE',
+          ),
+          1 => 
+          array (
+            'name' => 'yo_county_campaigns_name',
           ),
         ),
       ),
