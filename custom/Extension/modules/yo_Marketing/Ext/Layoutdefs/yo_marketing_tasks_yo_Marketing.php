@@ -1,6 +1,6 @@
 <?php
  // created: 2015-03-23 15:31:08
-$layout_defs["yo_Marketing"]["subpanel_setup"]['yo_marketing_tasks'] = array (
+/* $layout_defs["yo_Marketing"]["subpanel_setup"]['yo_marketing_tasks'] = array (
   'order' => 100,
   'module' => 'Tasks',
   'subpanel_name' => 'default',
@@ -20,4 +20,4 @@ $layout_defs["yo_Marketing"]["subpanel_setup"]['yo_marketing_tasks'] = array (
       'mode' => 'MultiSelect',
     ),
   ),
-);
+); */

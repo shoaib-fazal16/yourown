@@ -204,13 +204,6 @@ array (
             'name' => 'yo_marketing_aos_products_name',
           ),
         ),
-        15 => 
-        array (
-          0 => 
-          array (
-            'name' => 'aos_products_yo_marketing_1_name',
-          ),
-        ),
       ),
     ),
   ),

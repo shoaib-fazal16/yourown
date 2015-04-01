@@ -54,4 +54,5 @@ $mod_strings['LBL_LOT_ACRES'] = 'Lot Acres';
 $mod_strings['LBL_LONGITUDE'] = 'Longitude';
 $mod_strings['LBL_LATITUDE'] = 'Latitude';
 $mod_strings['LBL_HOA'] = 'HOA';
+$mod_strings['LBL_YO_SALES_AOS_PRODUCTS_FROM_YO_SALES_TITLE'] = 'Sales';
 ?>

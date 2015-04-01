@@ -50,7 +50,7 @@ class AOS_ProductsViewEdit extends SugarView {
 ss;
 		$this->ev->process();
 		echo $this->ev->display( $this->showTitle );
-	    echo $js_var;
+	   // echo $js_var;
 	}
 
 	protected function getEditView() {

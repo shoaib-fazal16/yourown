@@ -12,11 +12,10 @@
             parent::ViewDetail();
         }
    
-
-	function display()
-	{
-		$js_var = <<<ss
-		<script>
+		function display()
+		{
+			$js_var = <<<ss
+			<script>
 
 			$( document ).ready( function() {
 
@@ -32,13 +31,12 @@
 			
 		</script>
 ss;
-		 echo $js_var;
-		 echo "<div id='county_detail_loading' style='display:none;width:5%;position: absolute;border:1px solid grey;border-radius:2px;top: 25%;left: 30%;margin-top: -30px;margin-left: 200px;background:white;z-index:9999;padding: 5px;text-align: center;'>Loading...</div>";
-		echo "<div id='county_detail' style='display:none;width:60%;position: absolute;border:1px solid grey;border-radius:2px;top: 25%;left: 30%;margin-top: -30px;margin-left: -180px;background:white;z-index:9999;'></div>";
-		echo '<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWpFlFGYoGQr6Z0jRLnpmYWlMBh5FJjcE"></script>';
-		parent::display();	
-
-	}
+			//echo $js_var;
+			echo "<div id='county_detail_loading' style='display:none;width:5%;position: absolute;border:1px solid grey;border-radius:2px;top: 25%;left: 30%;margin-top: -30px;margin-left: 200px;background:white;z-index:9999;padding: 5px;text-align: center;'>Loading...</div>";
+			echo "<div id='county_detail' style='display:none;width:60%;position: absolute;border:1px solid grey;border-radius:2px;top: 25%;left: 30%;margin-top: -30px;margin-left: -180px;background:white;z-index:9999;'></div>";
+			echo '<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWpFlFGYoGQr6Z0jRLnpmYWlMBh5FJjcE"></script>';
+			parent::display();	
+		}
         /**
          * Override - Called from process(). This method will display subpanels.
          */
@@ -49,17 +47,16 @@ ss;
                 $GLOBALS['focus'] = $this->bean;
                 require_once ('include/SubPanel/SubPanelTiles.php');
                 $subpanel = new SubPanelTiles($this->bean, $this->module);
-
+				$hideSubpanels=array(
+					'yo_sales_aos_products',                       
+				);
                 //Dependent logic
                 if ($this->bean->phase == 'Marketing' || $this->bean->phase == 'Sold' )
                 {
                     //Subpanels to hide
-                    $hideSubpanels=array(
-                        'aos_products_documents_1',                       
-                    );
-
+                    $hideSubpanels[]='aos_products_documents_1';
+					unset($hideSubpanels[0]); //remove yo_sales_aos_products
 				}
-
 				/* elseif($this->bean->phase_c == 'Acquisitions')
 				{
 
@@ -68,7 +65,7 @@ ss;
 						'leads_aos_products_1',						
 					);
 				} */	
-   
+
 				foreach ($hideSubpanels as $subpanelKey)
 				{
 					//Remove subpanel if set
@@ -77,8 +74,6 @@ ss;
 						unset($subpanel->subpanel_definitions->layout_defs['subpanel_setup'][$subpanelKey]);
 					}
 				}
-                
-   
                 echo $subpanel->display();
             }
         }

@@ -1,21 +1,21 @@
 <?php
 // created: 2015-03-22 15:32:01
 $dictionary["yo_sales_aos_products"] = array (
-  'true_relationship_type' => 'one-to-one',
+  'true_relationship_type' => 'one-to-many',
   'relationships' => 
   array (
     'yo_sales_aos_products' => 
     array (
-      'lhs_module' => 'yo_Sales',
-      'lhs_table' => 'yo_sales',
+	  'lhs_module' => 'AOS_Products',
+      'lhs_table' => 'aos_products',
       'lhs_key' => 'id',
-      'rhs_module' => 'AOS_Products',
-      'rhs_table' => 'aos_products',
+      'rhs_module' => 'yo_Sales',
+      'rhs_table' => 'yo_sales',
       'rhs_key' => 'id',
       'relationship_type' => 'many-to-many',
       'join_table' => 'yo_sales_aos_products_c',
-      'join_key_lhs' => 'yo_sales_aos_productsyo_sales_ida',
-      'join_key_rhs' => 'yo_sales_aos_productsaos_products_idb',
+	  'join_key_lhs' => 'yo_sales_aos_productsaos_products_idb',
+      'join_key_rhs' => 'yo_sales_aos_productsyo_sales_ida',    
     ),
   ),
   'table' => 'yo_sales_aos_products_c',

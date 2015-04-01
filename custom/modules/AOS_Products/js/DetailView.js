@@ -25,8 +25,13 @@ function initialize()
 	marker.setMap(map);
 }
 function view_county_detail(id){
+	if(!id)
+	{
+		alert("There is no County attached to this record");
+		return;
+	}
 	$('#county_detail_loading').show();
-	$.get( "index.php?module=ACQ2_Property_Information&action=county_detail&record="+id, function(response) {
+	$.get( "index.php?module=AOS_Products&action=county_detail&record="+id, function(response) {
 		$('#county_detail_loading').hide();
 		$('#county_detail').html(response).show();
 	});
