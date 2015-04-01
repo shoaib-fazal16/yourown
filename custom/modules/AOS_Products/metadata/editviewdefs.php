@@ -6,13 +6,6 @@ array (
   array (
     'templateMeta' => 
     array (
-	'includes' => 
-      array (
-        0 => 
-        array (
-          'file' => 'custom/modules/AOS_Products/js/calc.js',
-        ),
-      ),
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -37,6 +30,10 @@ array (
         0 => 
         array (
           'file' => 'modules/AOS_Products/js/products.js',
+        ),
+		1 => 
+        array (
+          'file' => 'custom/calc.js',
         ),
       ),
       'useTabs' => false,

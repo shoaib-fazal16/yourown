@@ -6,6 +6,13 @@ array (
   array (
     'templateMeta' => 
     array (
+	'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/yo_Marketing/js/calculatedfield.js',
+        ),
+      ),
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -51,7 +58,12 @@ array (
           1 => 
           array (
             'name' => 'available_for_sale',
-            'label' => 'LBL_AVAILABLE_FOR_SALE',
+			'displayParams' => 
+            array (
+				'field'=> array(
+					'onchange' => 'caclculate_dom()',
+				),
+            ),
           ),
         ),
         2 => 
@@ -185,6 +197,7 @@ array (
           array (
             'name' => 'date_of_month',
             'label' => 'LBL_DATE_OF_MONTH',
+			'customCode' => '<input type="text" title="Number of days after active" value="{$fields.date_of_month.value}" maxlength="255" size="30" id="date_of_month" name="date_of_month" readonly />',
           ),
         ),
         14 => 

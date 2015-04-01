@@ -6,6 +6,17 @@ array (
   array (
     'templateMeta' => 
     array (
+	'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/calc.js',
+        ),
+        1 => 
+        array (
+          'file' => 'custom/modules/AOS_Contracts/js/calculatedfield.js',
+        ),
+      ),
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -69,6 +80,12 @@ array (
           array (
             'name' => 'start_date',
             'label' => 'LBL_START_DATE',
+			'displayParams' => 
+            array (
+				'field'=> array(
+					'onchange' => 'caclculate_data_expiry_coe()',
+				),
+            ),
           ),
         ),
         3 => 
