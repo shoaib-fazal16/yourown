@@ -144,12 +144,20 @@
 			LEFT JOIN aos_products
 			ON yo_county_aos_products_c.yo_county_aos_productsaos_products_idb = aos_products.id
 			WHERE yo_county_aos_productsaos_products_idb IN ("'.$propoerty_ids.'")';
+			$GLOBALS['log']->fatal($query);
 			$result = $GLOBALS['db']->query($query);
-			$county_name = $GLOBALS['db']->fetchByAssoc($result);		
-			$printable =  str_replace("leads_aos_products_1_name_yo_county_aos_products_name",$county_name['county_name'], $printable );
-			$printable =  str_replace("leads_aos_products_1_name_name",$county_name['apn'], $printable );
-			$printable =  str_replace("leads_aos_products_1_name_legal_description",$county_name['legal_description'], $printable );
-			$printable =  str_replace("leads_aos_products_1_name_situs_state",$county_name['state'], $printable );	
+			while($county_name_array = $GLOBALS['db']->fetchByAssoc($result)){
+				$county_name['county_name'][] = $county_name_array['county_name'];
+				$county_name['apn'][] = $county_name_array['apn'];
+				$county_name['state'][] = $county_name_array['state'];
+				$county_name['legal_description'][] = $county_name_array['legal_description'];
+			}
+			/* $county_name = $GLOBALS['db']->fetchByAssoc($result);	 */	
+			//$GLOBALS['log']->fatal(print_r($county_name , true));
+			$printable =  str_replace("leads_aos_products_1_name_yo_county_aos_products_name",implode(', ',$county_name['county_name']), $printable );
+			$printable =  str_replace("leads_aos_products_1_name_name",implode(', ',$county_name['apn']), $printable );
+			$printable =  str_replace("leads_aos_products_1_name_legal_description",implode(', ',$county_name['legal_description']), $printable );
+			$printable =  str_replace("leads_aos_products_1_name_situs_state",implode(', ',$county_name['state']), $printable );	
 			////////////////////////////////////////////////
 			
 			$fp = fopen($sugar_config['upload_dir'].'nfile.pdf','wb');
