@@ -20,6 +20,13 @@ array (
           'field' => '30',
         ),
       ),
+	  'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/yo_AmortizationSchedule/js/DetailView.js',
+        ),
+      ),
       'useTabs' => false,
       'tabDefs' => 
       array (
@@ -49,6 +56,12 @@ array (
           array (
             'name' => 'payment',
             'label' => 'LBL_PAYMENT',
+			'displayParams' => 
+            array (
+				'field'=> array(
+					'onchange' => 'calculateEndingBalance()',
+				),
+            ),
           ),
           1 => 
           array (

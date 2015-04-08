@@ -13,9 +13,11 @@ class calculateSchedule
 			global $current_user, $db, $timedate;
 			$rel_name = 'yo_amortizationschedule_yo_sales';
 			$purchases = $bean->get_linked_beans($rel_name, 'yo_AmortizationSchedule');
+			
 			if(count($purchases) > 0)
 			{			
 				$purchase = $purchases[0];
+				
 				$total_paid = 0;
 				$getTotalPaymentQuery = 'SELECT SUM(yo_amortizationschedule.payment) as "total_payment"
 										FROM yo_amortizationschedule
@@ -24,8 +26,8 @@ class calculateSchedule
 										WHERE yo_amortizationschedule_yo_sales_c.yo_amortizationschedule_yo_salesyo_sales_ida = "'.$purchase->id.'" AND yo_amortizationschedule.received = 1 AND yo_amortizationschedule_yo_sales_c.deleted = 0' ;
 										
 				$result = $db->query($getTotalPaymentQuery);
-				while($totalPayment = $db->fetchByAssoc($result)){			
-					$total_paid = $bean->down_payment + $totalPayment['total_payment'];
+				while($totalPayment = $db->fetchByAssoc($result)){	
+					$total_paid = $purchase->down_payment + $totalPayment['total_payment'];
 				}
 				$payments = $purchase->get_linked_beans($rel_name, 'yo_amortizationschedule');
 				$sep='';
@@ -55,7 +57,6 @@ class calculateSchedule
 						}
 					}
 				}
-				
 				//delete all non paid payments
 				if(!empty($payment_ids))
 				{
