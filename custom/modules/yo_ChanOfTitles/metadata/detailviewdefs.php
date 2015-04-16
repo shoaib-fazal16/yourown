@@ -1,5 +1,7 @@
 <?php
-$viewdefs ['Documents'] = 
+$module_name = 'yo_ChanOfTitles';
+$_object_name = 'yo_chanoftitles';
+$viewdefs [$module_name] = 
 array (
   'DetailView' => 
   array (
@@ -8,10 +10,6 @@ array (
       'maxColumns' => '2',
       'form' => 
       array (
-        'hidden' => 
-        array (
-          0 => '<input type="hidden" name="old_id" value="{$fields.document_revision_id.value}">',
-        ),
       ),
       'widths' => 
       array (
@@ -29,7 +27,7 @@ array (
       'useTabs' => false,
       'tabDefs' => 
       array (
-        'LBL_DOCUMENT_INFORMATION' => 
+        'DEFAULT' => 
         array (
           'newTab' => false,
           'panelDefault' => 'expanded',
@@ -39,53 +37,19 @@ array (
     ),
     'panels' => 
     array (
-      'lbl_document_information' => 
+      'default' => 
       array (
         0 => 
         array (
-          0 => 
-          array (
-            'name' => 'filename',
-            'displayParams' => 
-            array (
-              'link' => 'filename',
-              'id' => 'document_revision_id',
-            ),
-          ),
-          1 => 
-          array (
-            'name' => 'status_id',
-            'label' => 'LBL_DOC_STATUS',
-          ),
+          0 => 'document_name',
+          1 => 'assigned_user_name',
         ),
         1 => 
         array (
-          0 => 
-          array (
-            'name' => 'document_name',
-            'label' => 'LBL_DOC_NAME',
-          ),
-          1 => 
-          array (
-            'name' => 'revision',
-            'label' => 'LBL_DOC_VERSION',
-          ),
+          0 => 'uploadfile',
+          1 => 'active_date',
         ),
         2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'document_type',
-            'studio' => 'visible',
-            'label' => 'LBL_DOCUMENT_TYPE',
-          ),
-          1 => 'exp_date',
-        ),
-        3 => 
-        array (
-          0 => 'active_date',
-        ),
-        4 => 
         array (
           0 => 
           array (
@@ -98,7 +62,7 @@ array (
             'label' => 'LBL_GRANTEE',
           ),
         ),
-        5 => 
+        3 => 
         array (
           0 => 
           array (
@@ -111,7 +75,7 @@ array (
             'label' => 'LBL_DOCUMENT_LINK',
           ),
         ),
-        6 => 
+        4 => 
         array (
           0 => 
           array (
@@ -124,7 +88,7 @@ array (
             'label' => 'LBL_PAGE_NUMBER',
           ),
         ),
-        7 => 
+        5 => 
         array (
           0 => 
           array (
@@ -137,44 +101,31 @@ array (
             'label' => 'LBL_MARITAL_STATUS',
           ),
         ),
-        8 => 
+        6 => 
         array (
           0 => 
+          array (
+            'name' => 'title_company',
+            'label' => 'LBL_TITLE_COMPANY',
+          ),
+          1 => 
           array (
             'name' => 'typed',
             'label' => 'LBL_TYPED',
           ),
         ),
-        9 => 
+        7 => 
+        array (
+          0 => 'description',
+          1 => '',
+        ),
+        8 => 
         array (
           0 => 
           array (
-            'name' => 'template_type',
-            'label' => 'LBL_DET_TEMPLATE_TYPE',
+            'name' => 'yo_chanoftitles_aos_products_name',
           ),
-          1 => 
-          array (
-            'name' => 'is_template',
-            'label' => 'LBL_DET_IS_TEMPLATE',
-          ),
-        ),
-        10 => 
-        array (
-          0 => 'category_id',
-        ),
-        11 => 
-        array (
-          0 => 
-          array (
-            'name' => 'description',
-            'comment' => 'Full text of the note',
-            'label' => 'LBL_DESCRIPTION',
-          ),
-        ),
-        12 => 
-        array (
-          0 => 'related_doc_name',
-          1 => 'related_doc_rev_number',
+          1 => '',
         ),
       ),
     ),

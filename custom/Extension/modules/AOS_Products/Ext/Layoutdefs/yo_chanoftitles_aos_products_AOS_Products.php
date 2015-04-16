@@ -1,13 +1,13 @@
 <?php
- // created: 2015-03-29 13:45:09
-$layout_defs["AOS_Products"]["subpanel_setup"]['aos_products_documents_2'] = array (
+ // created: 2015-04-16 18:16:56
+$layout_defs["AOS_Products"]["subpanel_setup"]['yo_chanoftitles_aos_products'] = array (
   'order' => 100,
-  'module' => 'Documents',
+  'module' => 'yo_ChanOfTitles',
   'subpanel_name' => 'default',
   'sort_order' => 'asc',
   'sort_by' => 'id',
-  'title_key' => 'LBL_AOS_PRODUCTS_DOCUMENTS_2_FROM_DOCUMENTS_TITLE',
-  'get_subpanel_data' => 'aos_products_documents_2',
+  'title_key' => 'LBL_YO_CHANOFTITLES_AOS_PRODUCTS_FROM_YO_CHANOFTITLES_TITLE',
+  'get_subpanel_data' => 'yo_chanoftitles_aos_products',
   'top_buttons' => 
   array (
     0 => 
