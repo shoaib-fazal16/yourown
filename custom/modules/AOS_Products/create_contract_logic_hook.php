@@ -3,7 +3,13 @@ class create_contract_logic_hook{
 	public function createContract($bean, $event, $arguments){
 		global $db;
 		$contract_id = '';
-		if(is_object($bean->aos_contracts_aos_products_1aos_contracts_ida)){
+		if(isset($bean->leads_aos_products_1) && !empty($bean->leads_aos_products_1)){
+			//require_once('modules/Leads/Lead.php');
+			$sellerID = $bean->leads_aos_products_1leads_ida;
+			$seller = new Lead();
+			$seller->retrieve($sellerID);
+			$contract_id = $seller->leads_aos_contracts_1aos_contracts_idb;
+		}elseif(is_object($bean->aos_contracts_aos_products_1aos_contracts_ida)){
 			$contract_id = $bean->aos_contracts_aos_products_1aos_contracts_ida->focus->id;
 		}else{
 			$contract_id = $bean->aos_contracts_aos_products_1aos_contracts_ida;
