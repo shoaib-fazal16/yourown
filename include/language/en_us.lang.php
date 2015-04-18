@@ -529,6 +529,7 @@ $app_list_strings = array (
     'Contacts' => 'Contact',
     'Tasks' => 'Task',
     'Opportunities' => 'Opportunity',
+    /* 'AOS_Products' => 'Properties', */
 
 
 

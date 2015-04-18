@@ -1,6 +1,13 @@
 <?php
 $listViewDefs ['Leads'] = 
 array (
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => true,
+  ),
   'STATUS' => 
   array (
     'width' => '7%',

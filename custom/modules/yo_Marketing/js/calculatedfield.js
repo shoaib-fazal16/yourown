@@ -7,7 +7,12 @@ function caclculate_dom(){
    var availForSale = new Date(availForSaleObject.value);
    var todaysDate = new Date();
    var differenceOfDates = dateDiffInDays(availForSale, todaysDate) ;
-   document.getElementById('date_of_month').value = differenceOfDates  ; 
+   if(differenceOfDates >= 0){
+	document.getElementById('date_of_month').value = differenceOfDates  ;   
+   }else{
+	document.getElementById('date_of_month').value = ''  ;   
+   }
+    
    
 }
 

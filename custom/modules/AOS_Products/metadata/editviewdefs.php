@@ -31,7 +31,7 @@ array (
         array (
           'file' => 'modules/AOS_Products/js/products.js',
         ),
-		1 => 
+        1 => 
         array (
           'file' => 'custom/calc.js',
         ),
@@ -104,70 +104,10 @@ array (
           array (
             'name' => 'leads_aos_products_1_name',
           ),
-          1 => '',
-        ),
-        3 => 
-        array (
-          0 => 
+          1 => 
           array (
             'name' => 'yo_county_aos_products_name',
           ),
-          1 => 
-          array (
-            'name' => 'yo_sales_aos_products_name',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
-            'name' => 'cost',
-            'label' => 'LBL_COST',
-          ),
-          1 => 
-          array (
-            'name' => 'price',
-            'label' => 'LBL_PRICE',
-          ),
-        ),
-        5 => 
-        array (
-          0 => 
-          array (
-            'name' => 'contact',
-            'label' => 'LBL_CONTACT',
-          ),
-          1 => 
-          array (
-            'name' => 'url',
-            'label' => 'LBL_URL',
-          ),
-        ),
-        6 => 
-        array (
-          0 => 
-          array (
-            'name' => 'description',
-            'label' => 'LBL_DESCRIPTION',
-          ),
-        ),
-        7 => 
-        array (
-          0 => 
-          array (
-            'name' => 'product_image',
-            'customCode' => '{$PRODUCT_IMAGE}',
-          ),
-        ),
-        8 => 
-        array (
-          0 => 
-          array (
-            'name' => 'currency_id',
-            'studio' => 'visible',
-            'label' => 'LBL_CURRENCY',
-          ),
-          1 => '',
         ),
       ),
       'lbl_editview_panel1' => 
@@ -260,7 +200,7 @@ array (
           array (
             'name' => 'gmap',
             'label' => 'LBL_GMAP',
-			'customCode' => '<input type="text" readonly="readonly">',
+            'customCode' => '<input type="text" readonly="readonly">',
           ),
         ),
       ),
@@ -368,56 +308,56 @@ array (
           0 => 'property_category',
           1 => 'property_use_1',
         ),
-		1 => 
+        1 => 
         array (
           0 => 'property_category_2',
           1 => 'property_use_2',
         ),
-		2 => 
+        2 => 
         array (
           0 => 'property_category_3',
           1 => 'property_use_3',
         ),
-		3 => 
+        3 => 
         array (
           0 => 'property_use_4',
           1 => 'property_use_5',
         ),
-		4 => 
+        4 => 
         array (
           0 => 'property_use_6',
         ),
-		5 => 
+        5 => 
         array (
           0 => 'lot_acres',
           1 => 'lot_sq_ft',
         ),
-		6 => 
+        6 => 
         array (
           0 => 'power',
           1 => 'sewer',
         ),
-		7 => 
+        7 => 
         array (
           0 => 'water',
           1 => 'road_access',
         ),
-		8 => 
+        8 => 
         array (
           0 => 'legal_access',
           1 => 'elevation',
         ),
-		9 => 
+        9 => 
         array (
           0 => 'survey',
           1 => 'property_taxes',
         ),
-		10 => 
+        10 => 
         array (
           0 => 'poa_fee',
           1 => 'zoning',
         ),
-		11 => 
+        11 => 
         array (
           0 => 'disclosure_statement',
         ),

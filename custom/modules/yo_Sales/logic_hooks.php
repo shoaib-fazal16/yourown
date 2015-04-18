@@ -5,6 +5,7 @@
 $hook_array = Array(); 
 // position, file, function 
 $hook_array['before_save'] = Array(); 
-$hook_array['before_save'][] = Array(2, 'EQUITY CALCULATOR', 'custom/modules/yo_Sales/equityCalculator.php','EquityCalculator', 'equityCalculator'); 
+$hook_array['before_save'][] = Array(2, 'EQUITY CALCULATOR', 'custom/modules/yo_Sales/equityCalculator.php','EquityCalculator', 'equityCalculator');
+$hook_array['before_save'][] = Array(124, '', 'custom/modules/yo_Sales/PhaseChanges.php','yo_Sales_PhaseChanges', 'execute');
 
 ?>

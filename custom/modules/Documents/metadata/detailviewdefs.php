@@ -84,6 +84,7 @@ array (
         3 => 
         array (
           0 => 'active_date',
+          1 => '',
         ),
         4 => 
         array (
@@ -144,6 +145,7 @@ array (
             'name' => 'typed',
             'label' => 'LBL_TYPED',
           ),
+          1 => '',
         ),
         9 => 
         array (
@@ -161,6 +163,7 @@ array (
         10 => 
         array (
           0 => 'category_id',
+          1 => '',
         ),
         11 => 
         array (
@@ -175,6 +178,14 @@ array (
         array (
           0 => 'related_doc_name',
           1 => 'related_doc_rev_number',
+        ),
+        13 => 
+        array (
+          0 => 
+          array (
+            'name' => 'aos_products_documents_2_name',
+          ),
+          1 => '',
         ),
       ),
     ),

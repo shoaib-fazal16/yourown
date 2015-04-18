@@ -1,5 +1,5 @@
 <?php
-// created: 2015-03-22 13:34:38
+// created: 2015-04-06 18:06:07
 $mod_strings = array (
   'LNK_NEW_LEAD' => 'Create Seller',
   'LNK_LEAD_LIST' => 'View Sellers',
@@ -20,4 +20,6 @@ $mod_strings = array (
   'LBL_LEAD_SOURCE' => 'Seller Source:',
   'LBL_LEAD_SOURCE_DESCRIPTION' => 'Seller Source Description:',
   'LBL_MODULE_NAME' => 'Sellers',
+  'LBL_LEADS_AOS_PRODUCTS_1_FROM_AOS_PRODUCTS_TITLE' => 'Property',
+  'LBL_STATUS' => 'Status:',
 );

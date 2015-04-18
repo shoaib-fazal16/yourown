@@ -14,6 +14,14 @@
    
 		function display()
 		{
+			$county_id = $this->bean->yo_county_aos_productsyo_county_ida;
+			if(isset($county_id) && !empty($county_id)){
+				$countyObj = new yo_County();
+				$countyObj->retrieve($county_id);
+				$this->ss->assign('t_website', $countyObj->treasurer_website);
+				$this->ss->assign('g_i_s_map', $countyObj->gismap);
+				$this->ss->assign('assessors_office_url', $countyObj->assessors_office_url);
+			}
 			$js_var = <<<ss
 			<script>
 
@@ -74,6 +82,7 @@ ss;
 						unset($subpanel->subpanel_definitions->layout_defs['subpanel_setup'][$subpanelKey]);
 					}
 				}
+				//$GLOBALS['log']->fatal(print_r($subpanel,true));
                 echo $subpanel->display();
             }
         }

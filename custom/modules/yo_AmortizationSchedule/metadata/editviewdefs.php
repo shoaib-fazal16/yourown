@@ -20,7 +20,7 @@ array (
           'field' => '30',
         ),
       ),
-	  'includes' => 
+      'includes' => 
       array (
         0 => 
         array (
@@ -56,11 +56,12 @@ array (
           array (
             'name' => 'payment',
             'label' => 'LBL_PAYMENT',
-			'displayParams' => 
+            'displayParams' => 
             array (
-				'field'=> array(
-					'onchange' => 'calculateEndingBalance()',
-				),
+              'field' => 
+              array (
+                'onchange' => 'calculateEndingBalance()',
+              ),
             ),
           ),
           1 => 
@@ -86,36 +87,44 @@ array (
         array (
           0 => 
           array (
-            'name' => 'cinterest',
-            'label' => 'LBL_CINTEREST',
+            'name' => 'tax_amnt',
+            'label' => 'LBL_TAX_AMNT',
           ),
           1 => 
           array (
-            'name' => 'ebalance',
-            'label' => 'LBL_EBALANCE',
+            'name' => 'cinterest',
+            'label' => 'LBL_CINTEREST',
           ),
         ),
         4 => 
         array (
           0 => 
           array (
-            'name' => 'cprincipal',
-            'label' => 'LBL_CPRINCIPAL',
+            'name' => 'ebalance',
+            'label' => 'LBL_EBALANCE',
           ),
           1 => 
           array (
-            'name' => 'paydate',
-            'label' => 'LBL_PAYDATE',
+            'name' => 'cprincipal',
+            'label' => 'LBL_CPRINCIPAL',
           ),
         ),
         5 => 
         array (
           0 => 
           array (
+            'name' => 'paydate',
+            'label' => 'LBL_PAYDATE',
+          ),
+          1 => 
+          array (
             'name' => 'received',
             'label' => 'LBL_RECEIVED',
           ),
-          1 => 'assigned_user_name',
+        ),
+        6 => 
+        array (
+          0 => 'assigned_user_name',
         ),
       ),
     ),

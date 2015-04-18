@@ -34,6 +34,14 @@ array (
         'default' => true,
         'width' => '10%',
       ),
+      'search_name' => 
+      array (
+        'label' => 'LBL_NAME',
+        'type' => 'name',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'search_name',
+      ),
       'date_entered' => 
       array (
         'type' => 'datetime',
@@ -67,15 +75,6 @@ array (
       'last_name' => 
       array (
         'name' => 'last_name',
-        'default' => true,
-        'width' => '10%',
-      ),
-      'primary_address_country' => 
-      array (
-        'name' => 'primary_address_country',
-        'label' => 'LBL_COUNTRY',
-        'type' => 'name',
-        'options' => 'countries_dom',
         'default' => true,
         'width' => '10%',
       ),

@@ -38,7 +38,7 @@ if(!defined('sugarEntry'))define('sugarEntry', true);
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-ini_set('max_execution_time', 36000);
+ini_set('max_execution_time', 360000);
 
 ini_set('display_errors',0);
  ini_set('post_max_size', '256M');

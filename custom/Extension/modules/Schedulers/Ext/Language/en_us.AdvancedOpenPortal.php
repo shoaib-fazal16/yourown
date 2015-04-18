@@ -21,4 +21,8 @@
  *
  * @author Salesagility Ltd <support@salesagility.com>
  */
-$mod_strings['LBL_POLLMONITOREDINBOXESAOP'] = 'AOP Poll Monitored Inboxes';?>
+$mod_strings['LBL_POLLMONITOREDINBOXESAOP'] = 'AOP Poll Monitored Inboxes';
+$mod_strings['LBL_LATEPAYMENTDATE'] = 'Late Payment Date';
+$mod_strings['LBL_EQUITYCAL'] = 'Equity Calculator';
+
+?>

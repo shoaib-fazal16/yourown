@@ -72,13 +72,16 @@ class hook{
 		
 	public static function createTask(&$bean, $event, $arguments){
 		if(!empty($bean->customer_signed_date) && isset($bean->customer_signed_date) && $bean->fetched_row['customer_signed_date'] != $bean->customer_signed_date ){
-			$task = new Task();
+			
 			$property_list = $bean->get_linked_beans('aos_contracts_aos_products_1', 'AOS_Products');
 			foreach($property_list as $property){
+				$task = new Task();
 				$task->name = 'Start Title Work';
 				$task->assigned_user_id = '2cfa6793-fb33-1643-af59-54eb4a2c83d9';
 				$task->parent_type = 'AOS_Products';
 				$task->parent_id = $property->id ;
+				$task->load_relationship('aos_products_tasks_1');
+				$task->aos_products_tasks_1->add($property->id);
 				$task->save();
 			}
 		}

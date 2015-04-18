@@ -183,7 +183,7 @@ $dictionary['yo_Marketing'] = array(
     'required' => false,
     'name' => 'date_of_month',
     'vname' => 'LBL_DATE_OF_MONTH',
-    'type' => 'varchar',
+    'type' => 'int',
     'massupdate' => 0,
     'no_default' => false,
     'comments' => '',
@@ -195,7 +195,7 @@ $dictionary['yo_Marketing'] = array(
     'reportable' => true,
     'unified_search' => false,
     'merge_filter' => 'disabled',
-    'len' => '255',
+    'len' => '26',
     'size' => '20',
   ),
   'down_payment' => 
@@ -593,4 +593,4 @@ $dictionary['yo_Marketing'] = array(
 if (!class_exists('VardefManager')){
         require_once('include/SugarObjects/VardefManager.php');
 }
-VardefManager::createVardef('yo_Marketing','yo_Marketing', array('basic','assignable'));
+VardefManager::createVardef('yo_Marketing','yo_Marketing', array('basic','assignable'));

@@ -1,5 +1,5 @@
 <?php
-// created: 2015-03-25 18:42:37
+// created: 2015-04-08 17:24:34
 $mod_strings = array (
   'LNK_NEW_RECORD' => 'Create Product',
   'LNK_LIST' => 'View Property',
@@ -10,4 +10,5 @@ $mod_strings = array (
   'LBL_EDITVIEW_PANEL2' => 'Offer Information',
   'LBL_EDITVIEW_PANEL3' => 'Restrictions',
   'LBL_EDITVIEW_PANEL4' => 'Characteristics',
+  'LBL_AOS_PRODUCTS_DOCUMENTS_2_FROM_DOCUMENTS_TITLE' => 'Chain of Titles',
 );

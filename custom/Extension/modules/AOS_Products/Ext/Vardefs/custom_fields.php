@@ -117,6 +117,7 @@ $dictionary["AOS_Products"]["fields"]["gis_map"] = array (
     'gen' => '',
     'link_target' => '400',
     'height' => '400',
+	'default' => 'https://www.google.com/maps/place/{location_latitude},{loction_longitude}',
 );
 $dictionary["AOS_Products"]["fields"]["gmap"] = array (
 	'name' => 'gmap',

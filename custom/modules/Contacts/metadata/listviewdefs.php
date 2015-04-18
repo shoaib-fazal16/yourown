@@ -42,6 +42,15 @@ array (
     'customCode' => '{$EMAIL1_LINK}{$EMAIL1}</a>',
     'default' => true,
   ),
+  'LEADS_CONTACTS_1_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_LEADS_CONTACTS_1_FROM_LEADS_TITLE',
+    'id' => 'LEADS_CONTACTS_1LEADS_IDA',
+    'width' => '10%',
+    'default' => true,
+  ),
   'ACCOUNT_NAME' => 
   array (
     'width' => '34%',

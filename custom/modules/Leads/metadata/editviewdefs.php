@@ -66,11 +66,6 @@ array (
           array (
             'name' => 'yo_investingentity_leads_name',
           ),
-          1 => 
-          array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO',
-          ),
         ),
         2 => 
         array (
@@ -89,7 +84,7 @@ array (
             'label' => 'LBL_SECONDARY_OWNER_FIRST',
           ),
           1 => 
-	  array (
+          array (
             'name' => 'secondary_owner_last',
             'label' => 'LBL_SECONDARY_OWNER_LAST',
           ),

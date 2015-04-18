@@ -6,7 +6,7 @@ array (
   array (
     'templateMeta' => 
     array (
-	'includes' => 
+      'includes' => 
       array (
         0 => 
         array (
@@ -73,6 +73,15 @@ array (
         array (
           0 => 
           array (
+            'name' => 'offer_mailed_date',
+            'label' => 'LBL_OFFER_MAILED_DATE',
+          ),
+          1 => '',
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
             'name' => 'gross_offer',
             'label' => 'LBL_GROSS_OFFER',
           ),
@@ -80,15 +89,16 @@ array (
           array (
             'name' => 'start_date',
             'label' => 'LBL_START_DATE',
-			'displayParams' => 
+            'displayParams' => 
             array (
-				'field'=> array(
-					'onchange' => 'caclculate_data_expiry_coe()',
-				),
+              'field' => 
+              array (
+                'onchange' => 'caclculate_data_expiry_coe()',
+              ),
             ),
           ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (
@@ -101,7 +111,7 @@ array (
             'label' => 'LBL_EXPIRATION_DATE',
           ),
         ),
-        4 => 
+        5 => 
         array (
           0 => 
           array (
@@ -114,7 +124,7 @@ array (
             'label' => 'LBL_COE_DATE',
           ),
         ),
-        5 => 
+        6 => 
         array (
           0 => 
           array (
@@ -127,7 +137,7 @@ array (
             'label' => 'LBL_COMPANY_SIGNED_DATE',
           ),
         ),
-        6 => 
+        7 => 
         array (
           0 => 
           array (
@@ -141,7 +151,7 @@ array (
             'type' => 'datetimecombo',
           ),
         ),
-        7 => 
+        8 => 
         array (
           0 => 
           array (
@@ -154,7 +164,7 @@ array (
             'label' => 'LBL_CONFIRMED_SIGNING',
           ),
         ),
-        8 => 
+        9 => 
         array (
           0 => 
           array (
@@ -166,7 +176,7 @@ array (
             'name' => 'leads_aos_contracts_1_name',
           ),
         ),
-        9 => 
+        10 => 
         array (
           0 => 
           array (
@@ -175,7 +185,7 @@ array (
           ),
           1 => '',
         ),
-        10 => 
+        11 => 
         array (
           0 => 
           array (

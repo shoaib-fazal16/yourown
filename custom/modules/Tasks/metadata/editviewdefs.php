@@ -36,6 +36,20 @@ array (
         ),
       ),
       'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'LBL_TASK_INFORMATION' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_PANEL_ASSIGNMENT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => true,
     ),
     'panels' => 
     array (
@@ -106,6 +120,7 @@ array (
               'required' => true,
             ),
           ),
+          1 => '',
         ),
         4 => 
         array (
