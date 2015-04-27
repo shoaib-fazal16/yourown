@@ -112,6 +112,6 @@ GROUP BY tasks.assigned_user_id";
 	$pdf->writeHTML($html, true, false, true, false, '');
 	// ---------------------------------------------------------
 	ob_clean();
-	$pdf->Output('ActivityReport.pdf', 'I');
+	$pdf->Output('ActivityReport.pdf', 'D');
 	die();
 ?>
