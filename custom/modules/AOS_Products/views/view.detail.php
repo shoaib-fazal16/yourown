@@ -62,7 +62,7 @@ ss;
                 if ($this->bean->phase == 'Marketing' || $this->bean->phase == 'Sold' )
                 {
                     //Subpanels to hide
-                    $hideSubpanels[]='aos_products_documents_1';
+                   // $hideSubpanels[]='aos_products_documents_1';
 					unset($hideSubpanels[0]); //remove yo_sales_aos_products
 				}
 				/* elseif($this->bean->phase_c == 'Acquisitions')
