@@ -136,6 +136,32 @@ array (
             'name' => 'aos_products_tasks_1_name',
           ),
         ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'escalatable',
+            'label' => 'LBL_ESCALATABLE',
+          ),
+          1 => 
+          array (
+            'name' => 'escalate_date',
+            'label' => 'LBL_ESCALATE_DATE',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'user',
+            'label' => 'LBL_USER',
+          ),
+          1 => 
+          array (
+            'name' => 'needs_review',
+            'label' => 'LBL_NEEDS_REVIEW',
+          ),
+        ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 
       array (
